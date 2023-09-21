@@ -36,27 +36,27 @@ Puedes usar la url:
 ```
   http://localhost:4567/sin?x=90
 ```
-![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/cos.PNG)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/sin.PNG)
 ### Función Conseno
 Puedes usar la url:
 ```
   http://localhost:4567/cos?x=60
 ```
-![](imgs/cos.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/cos.PNG)
 ### Función palíndromo
 Puedes usar la url:
 ```
   http://localhost:4567/palindrome?s=holoh
 ```
-![](imgs/palindromeV.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/palindromeV.PNG)
 Puedes usar la url:
 ```
   http://localhost:4567/palindrome?s=hola
 ```
-![](imgs/palindromeF.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/palindromeF.PNG)
 ### Función magnitud de vector
 Puedes usar la url:
 ```
   http://localhost:4567/magnitude?x=5&y=40
 ```
-![](imgs/vector.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/vector.PNG)
