@@ -49,6 +49,7 @@ Puedes usar la url:
   http://localhost:4567/palindrome?s=holoh
 ```
 ![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/palindromeV.PNG)
+
 Puedes usar la url:
 ```
   http://localhost:4567/palindrome?s=hola
@@ -60,3 +61,11 @@ Puedes usar la url:
   http://localhost:4567/magnitude?x=5&y=40
 ```
 ![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/vector.PNG)
+
+## Pruebas de Funcionamiento en Docker
+Cuando se crea la imagen, funcionamiento en cada uno de los contenedores:
+3400
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/Docker34000.PNG)
+34001
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/Docker34001.PNG)
+
