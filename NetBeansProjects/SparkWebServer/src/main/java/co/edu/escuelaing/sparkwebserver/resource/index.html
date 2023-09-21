@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spark REST Service</title>
+    </head>
+    <body>
+
+        <h1>Spark REST Service</h1>
+
+        <form action="/sin" method="post">
+            <input type="text" name="x" placeholder="X">
+            <input type="submit" value="Sin">
+        </form>
+
+        <form action="/cos" method="post">
+            <input type="text" name="x" placeholder="X">
+            <input type="submit" value="Cos">
+        </form>
+
+        <form action="/palindrome" method="post">
+            <input type="text" name="x" placeholder="Cadena">
+            <input type="submit" value="Palíndromo">
+        </form>
+
+        <form action="/magnitude" method="post">
+            <input type="text" name="x" placeholder="X">
+            <input type="text" name="y" placeholder="Y">
+            <input type="submit" value="Magnitud">
+        </form>
+
+        <script>
+            // Handle form submissions
+            function handleSubmit(event) {
+            event.preventDefault();
+
+            // Get the form data
+            var form = event.target;
+            var x = form.elements["x"].value;
+
+            // Make the HTTP request
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify({x: x}));
+
+            // Handle the response
+            xhr.onload = function() {
+            if (xhr.status === 200) {
+            var result = JSON.parse(xhr.responseText);
+            document.getElementById("result").innerHTML = result;
+            } else {
+            alert("Error: " + xhr.status);
+            }
+            };
+            }
+
+            // Bind the submit event to the forms
+            document.querySelectorAll("form").forEach(function(form) {
+            form.addEventListener("submit", handleSubmit);
+            });
+        </script>
+
+        <div id="result"></div>
+
+    </body>
+</html>
