@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bono</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Función Sin:</h1>
+        <form action="/hello">
+            <label for="name">Número:</label><br>
+            <input type="text" id="name" name="name" value="90"><br><br>
+            <input type="button" value="Submit" onclick="loadGetMsg()">
+        </form> 
+        <div id="getrespmsg"></div>
+
+        <script>
+            function loadGetMsg() {
+                let nameVar = document.getElementById("name").value;
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("getrespmsg").innerHTML =
+                    this.responseText;
+                }
+                xhttp.open("GET", "/hello?name="+nameVar);
+                xhttp.send();
+            }
+        </script>
+
+        <h1>Función Cos:</h1>
+        <form action="/hellopost">
+            <label for="postname">Número:</label><br>
+            <input type="text" id="postname" name="name" value="90"><br><br>
+            <input type="button" value="Submit" onclick="loadPostMsg(postname)">
+        </form>
+        
+        <div id="postrespmsg"></div>
+        
+        <script>
+            function loadGetMsg() {
+                let nameVar = document.getElementById("name").value;
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("getrespmsg").innerHTML =
+                    this.responseText;
+                }
+                xhttp.open("GET", "/hello?name="+nameVar);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>
