@@ -20,7 +20,7 @@ Para descargar el repositorio y verlo local, utiliza el siguiente código:
   git clone https://github.com/YeSte114/BonoAREP.git
 ```
 ```
-  cd AREP_LAB01
+  cd BonoAREP
 ```
 ### Prerequisitos
 Es necesario tener Java 8 y Maven instalados. Compruebe con los siguientes comandos:
@@ -36,7 +36,7 @@ Puedes usar la url:
 ```
   http://localhost:4567/sin?x=90
 ```
-![](imgs/sin.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/cos.PNG)
 ### Función Conseno
 Puedes usar la url:
 ```
