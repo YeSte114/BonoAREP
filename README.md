@@ -20,7 +20,7 @@ Para descargar el repositorio y verlo local, utiliza el siguiente código:
   git clone https://github.com/YeSte114/BonoAREP.git
 ```
 ```
-  cd AREP_LAB01
+  cd BonoAREP
 ```
 ### Prerequisitos
 Es necesario tener Java 8 y Maven instalados. Compruebe con los siguientes comandos:
@@ -36,27 +36,27 @@ Puedes usar la url:
 ```
   http://localhost:4567/sin?x=90
 ```
-![](imgs/sin.png)
-### Función Conseno
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/sin.PNG)
+### Función Coseno
 Puedes usar la url:
 ```
   http://localhost:4567/cos?x=60
 ```
-![](imgs/cos.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/cos.PNG)
 ### Función palíndromo
 Puedes usar la url:
 ```
   http://localhost:4567/palindrome?s=holoh
 ```
-![](imgs/palindromeV.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/palindromeV.PNG)
 Puedes usar la url:
 ```
   http://localhost:4567/palindrome?s=hola
 ```
-![](imgs/palindromeF.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/palindromeF.PNG)
 ### Función magnitud de vector
 Puedes usar la url:
 ```
   http://localhost:4567/magnitude?x=5&y=40
 ```
-![](imgs/vector.png)
+![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/vector.PNG)
