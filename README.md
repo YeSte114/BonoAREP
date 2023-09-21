@@ -37,7 +37,7 @@ Puedes usar la url:
   http://localhost:4567/sin?x=90
 ```
 ![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/sin.PNG)
-### Función Conseno
+### Función Coseno
 Puedes usar la url:
 ```
   http://localhost:4567/cos?x=60
