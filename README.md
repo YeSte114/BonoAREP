@@ -28,6 +28,7 @@ Es necesario tener Java 8 y Maven instalados. Compruebe con los siguientes coman
 ```
 java --version
 mvn --version
+Docker
 ```
 
 ## Funciones
@@ -66,6 +67,29 @@ Puedes usar la url:
 Cuando se crea la imagen, funcionamiento en cada uno de los contenedores:
 3400
 ![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/Docker34000.PNG)
+
 34001
+
 ![](https://github.com/YeSte114/BonoAREP/blob/main/imgs/Docker34001.PNG)
 
+## Imagen en Doker
+
+Primero,
+```
+  docker pull yeisonbarreto114/firstsprkwebapprepo:latest
+```
+
+Luego,
+
+```
+  docker run -d -p 4567:4567 --name firstsprkwebapprepo yeisonbarreto114/firstsprkwebapprepo
+```
+
+Podremos entrar al cliente web entrando en la url:
+```
+  localhost:4567/home
+```
+
+## Autor
+
+Yeison Steven Barreto
