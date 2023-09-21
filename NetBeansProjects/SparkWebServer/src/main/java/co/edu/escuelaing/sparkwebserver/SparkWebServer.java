@@ -14,6 +14,10 @@ public class SparkWebServer {
     public static void main(String... args) {
         port(getPort());
 
+        get("/home", (req, res) -> {
+            return new WebPage().getPage();
+        });
+
         get("/sin", (req, res) -> {
             double x = Math.sin(Double.parseDouble(req.queryParams("x")));
             return x;

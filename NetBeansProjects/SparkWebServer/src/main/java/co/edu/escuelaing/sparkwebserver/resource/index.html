@@ -1,68 +1,52 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
+        <title>Bono</title>
         <meta charset="UTF-8">
-        <title>Spark REST Service</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-
-        <h1>Spark REST Service</h1>
-
-        <form action="/sin" method="post">
-            <input type="text" name="x" placeholder="X">
-            <input type="submit" value="Sin">
-        </form>
-
-        <form action="/cos" method="post">
-            <input type="text" name="x" placeholder="X">
-            <input type="submit" value="Cos">
-        </form>
-
-        <form action="/palindrome" method="post">
-            <input type="text" name="x" placeholder="Cadena">
-            <input type="submit" value="Palíndromo">
-        </form>
-
-        <form action="/magnitude" method="post">
-            <input type="text" name="x" placeholder="X">
-            <input type="text" name="y" placeholder="Y">
-            <input type="submit" value="Magnitud">
-        </form>
+        <h1>Función Sin:</h1>
+        <form action="/hello">
+            <label for="name">Número:</label><br>
+            <input type="text" id="name" name="name" value="90"><br><br>
+            <input type="button" value="Submit" onclick="loadGetMsg()">
+        </form> 
+        <div id="getrespmsg"></div>
 
         <script>
-            // Handle form submissions
-            function handleSubmit(event) {
-            event.preventDefault();
-
-            // Get the form data
-            var form = event.target;
-            var x = form.elements["x"].value;
-
-            // Make the HTTP request
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", form.action);
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.send(JSON.stringify({x: x}));
-
-            // Handle the response
-            xhr.onload = function() {
-            if (xhr.status === 200) {
-            var result = JSON.parse(xhr.responseText);
-            document.getElementById("result").innerHTML = result;
-            } else {
-            alert("Error: " + xhr.status);
+            function loadGetMsg() {
+                let nameVar = document.getElementById("name").value;
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("getrespmsg").innerHTML =
+                    this.responseText;
+                }
+                xhttp.open("GET", "/hello?name="+nameVar);
+                xhttp.send();
             }
-            };
-            }
-
-            // Bind the submit event to the forms
-            document.querySelectorAll("form").forEach(function(form) {
-            form.addEventListener("submit", handleSubmit);
-            });
         </script>
 
-        <div id="result"></div>
-
+        <h1>Función Cos:</h1>
+        <form action="/hellopost">
+            <label for="postname">Número:</label><br>
+            <input type="text" id="postname" name="name" value="90"><br><br>
+            <input type="button" value="Submit" onclick="loadPostMsg(postname)">
+        </form>
+        
+        <div id="postrespmsg"></div>
+        
+        <script>
+            function loadGetMsg() {
+                let nameVar = document.getElementById("name").value;
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("getrespmsg").innerHTML =
+                    this.responseText;
+                }
+                xhttp.open("GET", "/hello?name="+nameVar);
+                xhttp.send();
+            }
+        </script>
     </body>
 </html>
